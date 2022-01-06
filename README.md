@@ -1,7 +1,7 @@
 # perch-assignment
 Coding assignment for Perch
 
-**What I have done for given hours(4 horus)**
+**What I have done in given hours(4 horus)**
 - 2 data models with one-to-one relationship
 - RESTful JSON API
 - data validation with Joi
