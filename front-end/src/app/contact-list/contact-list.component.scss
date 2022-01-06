@@ -1,0 +1,10 @@
+.content-container {
+    margin-top: 100px;
+    .action-btn-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+        margin-bottom: 5px;
+    }
+}

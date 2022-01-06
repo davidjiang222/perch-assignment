@@ -1,0 +1,45 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{isEditing ? 'Update contact' : 'Add contact'}}</h4>
+  <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef.hide()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form *ngIf="form" [formGroup]="form">
+    <div class="form-group">
+      <label>First Name <span class="text-danger">*</span></label>
+      <input type="text" [formControlName]="'firstName'" class="form-control" />
+      <div class="text-danger" *ngIf="form.get('firstName')?.hasError('required') && (form.controls['firstName']?.dirty || form.controls['firstName']?.touched)">First name is required.</div>
+    </div>
+    <div class="form-group input-row">
+      <label>Last Name <span class="text-danger">*</span></label>
+      <input type="text" [formControlName]="'lastName'" class="form-control" />
+      <div class="text-danger" *ngIf="form.get('lastName')?.hasError('required') && (form.controls['lastName']?.dirty || form.controls['lastName']?.touched)">Last name is required.</div>
+    </div>
+    <div class="form-group input-row">
+      <label>DOB</label>
+      <input type="text" [formControlName]="'dob'" class="form-control" />
+    </div>
+    <div class="form-group input-row">
+      <label>Address</label>
+      <input type="text" [formControlName]="'address'" class="form-control" />
+    </div>
+    <div class="form-group input-row">
+      <label>City</label>
+      <input type="text" [formControlName]="'city'" class="form-control" />
+    </div>
+    <div class="form-group input-row">
+      <label>State</label>
+      <input type="text" [formControlName]="'state'" class="form-control" />
+    </div>
+    <div class="form-group input-row">
+      <label>Phone <span class="text-danger">*</span></label>
+      <input type="text" [formControlName]="'phone'" class="form-control" />
+      <div class="text-danger" *ngIf="form.get('phone')?.hasError('required') && (form.controls['phone']?.dirty || form.controls['phone']?.touched)">Phone is required.</div>
+    </div>
+    <div class="form-group action-row input-row">
+      <button class="btn btn-primary mr-2" (click)="submit()" [disabled]="!form.valid">{{isEditing ? 'Update' : 'Create'}}</button>
+      <button class="btn btn-danger">Cancel</button>
+    </div>
+  </form>
+</div>
