@@ -8,7 +8,7 @@ Coding assignment for Perch
 - unit tests using mocha/chai in backend
 - search function in table
 
-**What I am thinking can be done afterwards**
+**What I am thinking that can be done afterwards**
 - user authentication & authorization with jwt in backend
 - implement auth gard logic in Angular front end
 - unit tests in Angular
